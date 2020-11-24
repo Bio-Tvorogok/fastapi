@@ -5,12 +5,6 @@ from httpx import AsyncClient
 from main import app
 
 
-# @pytest.fixture
-# async def client():
-#     async with AsyncClient(app=app, base_url="http://test") as ac:
-#         yield ac
-
-
 @pytest.mark.asyncio
 @pytest_mock.mock.patch('main.users_query_exe', return_value=[["2020-10-27", 1],
                                                               ["2020-10-27", 2],
